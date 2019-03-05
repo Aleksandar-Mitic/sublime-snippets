@@ -1,0 +1,15 @@
+<snippet>
+<content><![CDATA[
+namespace App\\${1};
+
+class ${2}
+{
+
+    ${0}
+
+}
+]]></content>
+<tabTrigger>class</tabTrigger>
+<description>Class Skeleton</description>
+<scope>embedding.php, text.html.basic, meta.embedded.block.php, source.php, meta.namespace.php, meta.path.php, keyword.other.namespace.php</scope>
+</snippet>

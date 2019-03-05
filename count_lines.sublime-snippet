@@ -1,0 +1,13 @@
+<snippet>
+<content><![CDATA[
+
+Menu - Find - Find in files...
+Then turn on regular expression search (regex) and use the following values:
+Find:
+
+^(.*)\$
+]]></content>
+<tabTrigger>count_lines</tabTrigger>
+<description>Count all code lines in a project.</description>
+<scope>text.plain</scope>
+</snippet>
