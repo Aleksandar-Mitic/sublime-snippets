@@ -1,0 +1,29 @@
+<snippet>
+    <content><![CDATA[
+global \$woocommerce;
+
+// For full list of arguments please check online docs here: https://github.com/woocommerce/woocommerce/wiki/wc_get_orders-and-WC_Order_Query
+\$args = array(
+    // Get orders created before the last day.
+    // 'date_created'   => '<' . ( time() - DAY_IN_SECONDS ),
+    'status'            => 'processing',
+    'return'            => 'ids',
+    'limit'             => -1,
+    // 'offset'            => 1
+    'order'             => 'ASC',
+    'payment_method'    => 'paypal',
+);
+
+\$orders = wc_get_orders( $args );
+
+// Loop true each order
+foreach (\$orders as \$order_id) {
+    \$order = wc_get_order( \$order_id );
+}
+
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>wc_list_orders</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.php</scope>
+</snippet>
